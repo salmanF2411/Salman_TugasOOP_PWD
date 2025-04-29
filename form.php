@@ -34,9 +34,9 @@
     <h2>Pemesanan Makanan Kantin</h2>
     <form method="post" action="proses.php">
         <p><strong>Pilih Menu:</strong></p>
-        <?php foreach ($daftarMenu as $key => $makanan): ?>
+        <?php foreach ($daftarMenu as $menu => $makanan): ?>
             <label>
-                <input type="checkbox" name="menu[]" value="<?= $key ?>">
+                <input type="checkbox" name="menu[]" value="<?= $menu ?>">
                 <?= $makanan->getInfo() ?>
             </label><br>
         <?php endforeach; ?>
